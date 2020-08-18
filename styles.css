@@ -1,0 +1,102 @@
+:root {
+    --blue: #2C3E50;
+    --red: #E74C3C;
+    --yellow: #F39C12;
+    --green: #18BC9C;
+    --cyan: #3498DB;
+    --white: #fff;
+    --dark: #7b8a8b;
+}
+
+html {
+    line-height: 1.15;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+pre {
+    margin: 0;
+}
+
+h4 {
+    margin: 1.5em 0 1em 0;
+}
+
+button {
+    background-color: var(--white);
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    color: var(--dark);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    min-width: 100px;
+    outline: 0;
+    text-align: center;
+    text-transform: uppercase;
+    height: 35px;
+}
+
+button.primary {
+    background-color: var(--green);
+    border: transparent;
+    color: var(--white);
+}
+
+button.info {
+    background-color: var(--cyan);
+    border: transparent;
+    color: var(--white);
+}
+
+button.danger {
+    background-color: var(--red);
+    border: transparent;
+    color: var(--white);
+}
+
+button:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+    background-color: darkgray;
+    color: var(--white);
+    cursor: not-allowed;
+}
+
+input, select {
+    background: var(--white);
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    color: var(--dark);
+    font-size: 16px;
+    height: 35px;
+    outline: none;
+    padding: 0 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+main {
+    margin: 2em;
+}
+
+.text-error {
+    color: var(--red);
+}
+
+.text-success {
+    color: var(--green);
+}
+
+.text-info {
+    color: var(--cyan);
+}

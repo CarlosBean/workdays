@@ -4,26 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>WorkDays</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <p>Ingrese la fecha deseada y el turno actual</p>
-    <input type="date" id="inputDate">
-    <select name="turn" id="inputTurn">
-        <option value="" disabled selected>Turno Actual</option>
-        <option value="0">Tarde 1</option>
-        <option value="1">Tarde 2</option>
-        <option value="2">Mañana 1</option>
-        <option value="3">Mañana 2</option>
-        <option value="4">Noche 1</option>
-        <option value="5">Noche 2</option>
-        <option value="6">Descanso 1</option>
-        <option value="7">Descanso 2</option>
-    </select>
-    <p id="result"></p>
-    <button onclick="getWorkTurn()">PRESS</button>
+    <main>
+        <h3>Ingrese la fecha deseada y el turno actual</h3>
+        <input type="date" id="inputDate">
+        <select name="turn" id="inputTurn">
+            <option value="" disabled selected>Turno Actual</option>
+            <option value="0">Tarde 1</option>
+            <option value="1">Tarde 2</option>
+            <option value="2">Mañana 1</option>
+            <option value="3">Mañana 2</option>
+            <option value="4">Noche 1</option>
+            <option value="5">Noche 2</option>
+            <option value="6">Descanso 1</option>
+            <option value="7">Descanso 2</option>
+        </select>
+        <button class="primary" onclick="getWorkTurn()">Calcular</button>
+        <h3 id="result"></h3>
+    </main>
     <script src="main.js"></script>
 </body>
 
