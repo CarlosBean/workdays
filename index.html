@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <p>Ingrese la fecha deseada y el turno actual</p>
+    <input type="date" id="inputDate">
+    <select name="turn" id="inputTurn">
+        <option value="" disabled selected>Turno Actual</option>
+        <option value="0">Tarde 1</option>
+        <option value="1">Tarde 2</option>
+        <option value="2">Mañana 1</option>
+        <option value="3">Mañana 2</option>
+        <option value="4">Noche 1</option>
+        <option value="5">Noche 2</option>
+        <option value="6">Descanso 1</option>
+        <option value="7">Descanso 2</option>
+    </select>
+    <p id="result"></p>
+    <button onclick="getWorkTurn()">PRESS</button>
+    <script src="main.js"></script>
+</body>
+
+</html>
