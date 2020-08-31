@@ -7,25 +7,45 @@
     <title>WorkDays</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 
 <body>
     <main>
-        <h3>Ingrese la fecha deseada y el turno actual</h3>
-        <input type="date" id="inputDate">
-        <select name="turn" id="inputTurn">
-            <option value="" disabled selected>Turno Actual</option>
-            <option value="0">Tarde 1</option>
-            <option value="1">Tarde 2</option>
-            <option value="2">Mañana 1</option>
-            <option value="3">Mañana 2</option>
-            <option value="4">Noche 1</option>
-            <option value="5">Noche 2</option>
-            <option value="6">Descanso 1</option>
-            <option value="7">Descanso 2</option>
-        </select>
-        <button class="primary" onclick="getWorkTurn()">Calcular</button>
-        <h3 id="result"></h3>
+        <section class="sidebar">
+            <div style="width: 100%;">
+                <h3>Buscar por fecha</h3>
+                <div class="input-date-container">
+                    <input type="date" id="inputDate" onchange="onChangeDate(event)">
+                    <button id="searchBtn" class="primary" onclick="searchWorkTurnByDate()">Buscar</button>
+                </div>
+                <h3 id="resultLabel"></h3>
+            </div>
+            <div class="img-container" id="img-container"></div>
+        </section>
+
+        <section class="calendar">
+            <div class="calendar-nav">
+                <button class="primary" onclick="changeMonth(-1)">
+                    <span class="d-none sm-block">Prev</span>
+                    <span class="lnr lnr-chevron-left d-block sm-none"></span>
+                </button>
+
+                <div class="calendar-title">
+                    <h3><span class="capitalize" id="monthLabel"></span>&nbsp;<span id="yearLabel"></span></h3>
+                    <select name="turn" id="selectTurn" onchange="onChangeTurn(event)"></select>
+                </div>
+
+                <button class="primary" onclick="changeMonth(+1)">
+                    <span class="d-none sm-block">Next</span>
+                    <span class="lnr lnr-chevron-right d-block sm-none"></span>
+                </button>
+
+                <!-- <button class="primary" disabled style="visibility: hidden;">Hoy</button> -->
+            </div>
+            <table id="calendar"></table>
+            <div id="tags"></div>
+        </section>
     </main>
     <script src="main.js"></script>
 </body>
